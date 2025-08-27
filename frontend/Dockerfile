@@ -3,30 +3,28 @@ FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-# Copy package.json and lock files from frontend folder
+# Copy package.json and lock files
 COPY package*.json ./
 
 # Install dependencies
 RUN npm ci
 
-# Copy the rest of the frontend source code
+# Copy frontend source code
 COPY . ./
 
-# Build the React app (Vite outputs to dist, CRA to build)
+# Build the React app
 RUN npm run build
 
 # Stage 2: Serve frontend with nginx
 FROM nginx:alpine
 
-# Remove default nginx static content
-RUN rm -rf /usr/share/nginx/html/*
+# Copy custom nginx config
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy built React files from builder stage
-# (adjust "dist" → "build" if you use CRA instead of Vite)
-COPY --from=builder /app/dist /usr/share/nginx/html
+# Copy built React files (change "build" <-> "dist" depending on your framework)
+COPY --from=builder /app/build /usr/share/nginx/html
 
-# Expose Cloud Run port
+# Expose port (Cloud Run requires 8080)
 EXPOSE 8080
 
-# Run nginx in foreground
 CMD ["nginx", "-g", "daemon off;"]
