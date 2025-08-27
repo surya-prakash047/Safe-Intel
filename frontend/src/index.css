@@ -1,0 +1,43 @@
+@import "tailwindcss";
+
+/* Custom blue pastel styling */
+:root {
+  --blue-pastel-light: rgba(147, 197, 253, 0.1);
+  --blue-pastel-medium: rgba(147, 197, 253, 0.2);
+  --blue-pastel-accent: rgba(59, 130, 246, 0.05);
+}
+
+/* Subtle scroll animations */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar styling with blue theme */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(248, 250, 252, 0.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(147, 197, 253, 0.6);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(59, 130, 246, 0.8);
+}
+
+/* Subtle blue glow for focus states */
+*:focus-visible {
+  outline: 2px solid rgba(59, 130, 246, 0.6);
+  outline-offset: 2px;
+}
+
+/* Selection styling */
+::selection {
+  background: rgba(147, 197, 253, 0.3);
+  color: rgb(30, 58, 138);
+}
