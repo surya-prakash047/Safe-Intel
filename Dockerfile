@@ -35,7 +35,7 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY backend/ ./backend/
 COPY ml/ ./ml/
 COPY dataset/ ./dataset/
-COPY run.py ./
+COPY run_simple.py ./run.py
 
 # Copy built frontend from previous stage
 COPY --from=frontend-builder /app/frontend/dist ./static

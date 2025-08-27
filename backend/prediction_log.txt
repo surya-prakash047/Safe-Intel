@@ -2488,3 +2488,27 @@ ng
 2025-08-28 01:40:35,039 - INFO -  * Restarting with watchdog (windowsapi)
 2025-08-28 01:40:37,788 - WARNING -  * Debugger is active!
 2025-08-28 01:40:37,792 - INFO -  * Debugger PIN: 390-528-837
+2025-08-28 02:06:19,553 - INFO -  * Detected change in 'C:\\D_\\projects\\dsp_model\\backend\\app.py', reloading
+2025-08-28 02:06:20,136 - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-28 02:06:22,095 - WARNING -  * Debugger is active!
+2025-08-28 02:06:22,099 - INFO -  * Debugger PIN: 390-528-837
+2025-08-28 02:06:56,712 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\__init__.py', reloading
+2025-08-28 02:06:56,743 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\app.py', reloading
+2025-08-28 02:06:56,771 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\sansio\\app.py', reloading
+2025-08-28 02:06:56,789 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\sansio\\scaffold.py', reloading
+2025-08-28 02:06:56,808 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\helpers.py', reloading
+2025-08-28 02:06:56,828 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\wrappers.py', reloading
+2025-08-28 02:06:56,839 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\wrappers\\__init__.py', reloading
+2025-08-28 02:06:56,852 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\wrappers\\response.py', reloading
+2025-08-28 02:06:56,869 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\sansio\\response.py', reloading
+2025-08-28 02:06:56,906 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\config.py', reloading
+2025-08-28 02:06:56,924 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\typing.py', reloading
+2025-08-28 02:06:56,935 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\datastructures\\__init__.py', reloading
+2025-08-28 02:06:56,948 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\datastructures\\headers.py', reloading
+2025-08-28 02:06:57,009 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\exceptions.py', reloading
+2025-08-28 02:06:57,026 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\flask\\json\\provider.py', reloading
+2025-08-28 02:06:57,042 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\routing\\__init__.py', reloading
+2025-08-28 02:06:57,060 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\routing\\map.py', reloading
+2025-08-28 02:06:57,077 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\routing\\rules.py', reloading
+2025-08-28 02:06:57,096 - INFO -  * Detected change in 'C:\\Users\\Sharvesh\\AppData\\Roaming\\Python\\Python312\\site-packages\\werkzeug\\routing\\converters.py', reloading
+2025-08-28 02:06:57,515 - INFO -  * Restarting with watchdog (windowsapi)
