@@ -4,15 +4,15 @@ FROM node:18-alpine AS builder
 WORKDIR /app
 
 # Copy package.json and lock files
-COPY frontend/package*.json ./
+COPY package*.json ./
 
 # Install dependencies
 RUN npm ci
 
 # Copy frontend source code
-COPY frontend/ ./
+COPY . ./
 
-# Build the React app
+# Build the React app (Vite/CRA auto outputs to dist or build)
 RUN npm run build
 
 # Stage 2: Serve frontend with nginx
