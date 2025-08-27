@@ -2482,3 +2482,9 @@ ng
 2025-08-28 00:57:39,722 - INFO -  * Restarting with watchdog (windowsapi)
 2025-08-28 00:57:56,719 - WARNING -  * Debugger is active!
 2025-08-28 00:57:56,723 - INFO -  * Debugger PIN: 390-528-837
+2025-08-28 01:40:34,473 - INFO -  * Detected change in 'C:\\D_\\projects\\dsp_model\\backend\\run.py', reloading
+2025-08-28 01:40:34,596 - INFO -  * Detected change in 'C:\\D_\\projects\\dsp_model\\backend\\run.py', reloading
+2025-08-28 01:40:34,598 - INFO -  * Detected change in 'C:\\D_\\projects\\dsp_model\\backend\\run.py', reloading
+2025-08-28 01:40:35,039 - INFO -  * Restarting with watchdog (windowsapi)
+2025-08-28 01:40:37,788 - WARNING -  * Debugger is active!
+2025-08-28 01:40:37,792 - INFO -  * Debugger PIN: 390-528-837

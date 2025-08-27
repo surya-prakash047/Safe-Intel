@@ -1,0 +1,45 @@
+version: '3.8'
+
+services:
+  safeintel:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    environment:
+      - FLASK_ENV=production
+      - PORT=8080
+    volumes:
+      # For development, you can mount code for hot reloading
+      # - ./backend:/app/backend
+      # - ./ml:/app/ml
+      - ./prediction_log.txt:/app/prediction_log.txt
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/api/predict", "-X", "POST", "-H", "Content-Type: application/json", "-d", "{}"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+# For development with hot reloading
+  safeintel-dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: frontend-build  # Stop at frontend build stage
+    ports:
+      - "5173:5173"  # Frontend dev server
+      - "5000:5000"  # Backend dev server
+    environment:
+      - FLASK_ENV=development
+      - NODE_ENV=development
+    volumes:
+      - ./frontend:/app/frontend
+      - ./backend:/app/backend
+      - ./ml:/app/ml
+      - /app/frontend/node_modules  # Anonymous volume for node_modules
+    profiles:
+      - development
+    command: ["sh", "-c", "cd /app/frontend && npm run dev & cd /app && python backend/app.py"]

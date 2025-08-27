@@ -101,8 +101,11 @@ export default function DeviceForm() {
     
     console.log("🚀 Submitting prediction request:", requestData);
     
+    // Use relative URL for production, localhost for development
+    const apiUrl = process.env.NODE_ENV === 'production' ? '/predict' : 'http://localhost:5000/predict';
+    
     try {
-      const response = await fetch('http://localhost:5000/predict', {
+      const response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
