@@ -210,6 +210,35 @@ Response:
 }
 ```
 
+## 🚀 Deployment
+
+### Docker Deployment
+```bash
+# Build and run locally
+docker build -t safeintel .
+docker run -p 8080:8080 safeintel
+
+# Or use docker-compose
+docker-compose up
+```
+
+### Google Cloud Run
+```bash
+# Set your project ID
+export PROJECT_ID=your-project-id
+
+# Deploy using the provided script
+./deploy.sh
+```
+
+### Testing Build
+```bash
+# Test Docker build locally before deploying
+./test-build.sh
+```
+
+For detailed deployment instructions, see [DEPLOYMENT.md](DEPLOYMENT.md).
+
 ---
 
 **Note**: This system provides comprehensive monitoring and evaluation capabilities for medical device classification predictions, with detailed metrics displayed in VS Code terminal output.
