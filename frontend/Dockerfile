@@ -1,32 +1,34 @@
-# Stage 1: Build Vite React frontend
+# Stage 1: Build the Vite app
 FROM node:18-alpine AS builder
 
 WORKDIR /app
 
-# Copy package.json and lock files
+# Copy package.json and package-lock.json (if available)
 COPY package*.json ./
 
-# Install deps
+# Install all dependencies (including devDependencies for build)
 RUN npm ci
 
-# Copy frontend source
-COPY . ./
+# Copy source code
+COPY . .
 
-# Build Vite app (outputs to /dist)
+# Build the Vite app
 RUN npm run build
 
-# Stage 2: Serve frontend with nginx
+# Stage 2: Serve with nginx
 FROM nginx:alpine
 
-# Remove default config
+# Remove default nginx config
 RUN rm /etc/nginx/conf.d/default.conf
 
-# Copy custom nginx config
-COPY nginx.conf /etc/nginx/conf.d
+# Copy custom nginx configuration
+COPY nginx.conf /etc/nginx/conf.d/default.conf
 
-# Copy built Vite files to nginx html directory
+# Copy built files from builder stage
 COPY --from=builder /app/dist /usr/share/nginx/html
 
+# Expose port 8080 (Cloud Run requirement)
 EXPOSE 8080
 
+# Start nginx
 CMD ["nginx", "-g", "daemon off;"]
