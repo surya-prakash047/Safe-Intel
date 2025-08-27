@@ -7,10 +7,8 @@ A comprehensive system for predicting medical device severity classifications us
 ```
 dsp_model/
 ├── 📁 ml/                          # Machine Learning Components
-│   ├── catboost_model.pkl          # Trained CatBoost model
+│   ├── catboost_model_6.pkl          # Trained CatBoost model
 │   ├── model_evaluator.py          # Model performance evaluation script
-│   ├── medical_device_classification_tutorial.ipynb
-│   └── test.ipynb
 ├── 📁 backend/                     # Flask API Backend
 │   ├── app.py                      # Main Flask application
 │   ├── requirements.txt            # Python dependencies
@@ -21,7 +19,7 @@ dsp_model/
 │   ├── package.json                # Node.js dependencies
 │   └── vite.config.js              # Vite configuration
 ├── 📁 dataset/                     # Data Files
-│   ├── master_v2.csv               # Main dataset
+│   ├── master_v5.csv               # Main dataset
 │   └── combined_v11_fixed.csv      # Additional dataset
 └── 📄 Setup & Utility Scripts
     ├── start_application.bat       # Start both frontend & backend
